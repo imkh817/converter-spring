@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body> <ul>
+    <li>${account.money}: <span th:text="${account.money}" ></span></li>
+    <li>${{account.money}}: <span th:text="${{account.money}}" ></span></li>
+    <li>${account.dateTime}: <span th:text="${account.dateTime}" ></span></li>
+    <li>${{account.dateTime}}: <span th:text="${{account.dateTime}}" ></span></li>
+</ul>
+</body>
+</html>

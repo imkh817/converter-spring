@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${account}" th:method="post">
+    money <input type="text" th:field="*{money}"><br/>
+    dateTime <input type="text" th:field="*{dateTime}"><br/>
+    <input type="submit"/>
+</form>
+</body>
+</html>
