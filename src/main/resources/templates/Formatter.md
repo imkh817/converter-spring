@@ -30,10 +30,10 @@ public interface Printer<T> {
 
 숫자 `1000` 을 문자 `"1,000"` 으로 그러니까, 1000 단위로 쉼표가 들어가는 포맷을 적용해겠다. 그리고 그 반대도 처리해주는 포맷터도 적용해보겠다.<br>
 **MyNumberFormat 추가**<br>
-[MyNumberFormat]()
+[MyNumberFormat](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/formatter/MyNumberFormatter.java)
 
 **테스트 코드로 실행**<br>
-[Test Code]()<br>
+[Test Code](https://github.com/imkh817/converter-spring/blob/master/src/test/java/hello/typeconverter/formatter/MyNumberFormatterTest.java)<br>
 
 ![Test 결과](https://blog.kakaocdn.net/dn/baHxN1/btsExIlRYSB/azUZW1bteHnsJYwJK8nkh1/img.png)
 테스트 코드 둘다 성공하였다.<br>
@@ -43,12 +43,12 @@ public interface Printer<T> {
 Converter와 마찬가지로 동일하게 WebConfig에 등록해주면 된다. 나는 나중에 다시 한번 더 공부할때를 위해서 따로 WebConfig2를 만들어 등록하겠다.<br>
 
 **WebConfig2 추가**<br>
-[WebConfig2]()
+[WebConfig2](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/WebConfig2.java)
 
 ## 실행 👨🏻‍💻
 
 **ControllerV3 추가**<br>
-[ControllerV3]() <br>
+[ControllerV3](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/controller/ControllerV3.java) <br>
 
 http://localhost:8080/test/fommater/money?money=1,000 호출 <br>
 ![실헹 결과](https://blog.kakaocdn.net/dn/YkCxD/btsEy1Syf9L/gNqJSzkgMrxZeLxFYEeQqk/img.png)
