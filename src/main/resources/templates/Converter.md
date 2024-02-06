@@ -5,7 +5,7 @@
 이번엔 스프링에서 어떤 기능을 제공해주기 때문에 자동으로 타입 변환이 가능한지 확인해보고 내가 직접 정의해서 타입을 만들어 볼 것이다!
 
 예시 컨트롤러를 추가해보자.<br>
-[예시 Controller]()
+[예시 Controller](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/controller/Controller.java)
 
 예시 컨트롤러에는 간단히 GET 방식으로 아이디 값을 입력하고, 그걸 Integer형으로 변환해서 보여주는 코드를 짰다.
 
@@ -17,7 +17,8 @@ URL을 보면 converter?id=10으로 넘겼지만 이 부분은 String 형태로 
 하지만 @RequestParam 애노테이션으로 값을 받으면서 자동으로 Integer형태로 값이 변환되었다.<br>
 참고로 `@RequestParam`, `@ModelAttribute`, `@PathVariable` 모두 마찬가지로 `자동 타입 변환을 해준다.`<br>
 
-### 이렇게 Spring은 개발자를 위해 다양한 타입 변환을 해준다. 그런데 만약 개발자가 새로운 타입을 만들어서 변환하고 싶으면 어떻게 할까 ❓
+### 이렇게 Spring은 개발자를 위해 다양한 타입 변환을 해준다. 
+### 그런데 만약 개발자가 새로운 타입을 만들어서 변환하고 싶으면 어떻게 할까 ❓
 
 이 또한 Spring 에서 확장 가능한 `컨버터 인터페이스`를 제공한다.
 
@@ -38,14 +39,14 @@ URL을 보면 converter?id=10으로 넘겼지만 이 부분은 String 형태로 
 ## 사용자 정의 타입 컨버터 ✍🏻
 
 **타입 변환 시킬 객체 추가** <br>
-[Student]()
+[Student](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/type/Student.java)
 
 **사용자 정의 타입 컨버터 추가**<br>
-[StringToStudentConverter]() **String -> Student**<br>
-[StudentToStringConverter]() **String -> Student**<br>
+[StringToStudentConverter](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/converter/StringToStudentConverter.java) **String -> Student**<br>
+[StudentToStringConverter](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/converter/StudentToStringConverter.java) **String -> Student**<br>
 
 **테스트 코드로 실행**<br>
-[TestCode](test)<br>
+[TestCode](https://github.com/imkh817/converter-spring/blob/master/src/test/java/hello/typeconverter/converter/StudentToStringConverterTest.java)<br>
 
 ![TestCode 성공](https://blog.kakaocdn.net/dn/b5c64Q/btsEy1kHZDe/pumKNenTFUAAK6nAbjTJI0/img.png)
 
@@ -78,8 +79,9 @@ ConversionService 인터페이스는 `컨버티가 가능한지 확인하는 기
 ## 실행 👨🏻‍💻
 
 **ControllerV2 추가**<br>
-[ControllerV2]()
-http://localhost:8080/test/converterV2/StringToStudent?student=전우치:120 <br>
-![실행 결과]()<br>
+[ControllerV2](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/controller/ControllerV2.java)<br>
+http://localhost:8080/test/converterV2/StringToStudent?student=전우치:120 호출<br>
+
+![실행 결과](https://blog.kakaocdn.net/dn/djEoqo/btsEyvl3mvR/kdsgOH3CUcWPOtCerzy1Uk/img.png)<br>
 
 실행 결과를 보면 로그가 잘 찍힌 것을 확인 할 수 있다!
