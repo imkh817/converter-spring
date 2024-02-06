@@ -72,7 +72,7 @@ ConversionService 인터페이스는 `컨버티가 가능한지 확인하는 기
 참고로 Spring 내부에서 ConversionService 제공하기 때문에 우리는 등록만 하면 된다 ❗️<br>
 
 **ConversionService에 컨버터 등록**<br>
-[Spring내의 ConversionService에 컨버터 등록](Webconfig)<br>
+[Spring내의 ConversionService에 컨버터 등록](https://github.com/imkh817/converter-spring/blob/master/src/main/java/hello/typeconverter/WebConfig.java)<br>
 - `WebMvcConfigurer` 가 제공하는 `addFormatters()` 를 사용해서 추가하고 싶은 컨버터를 등록하면 된다. <br>
 - 이렇게 하면 스프링은 내부에서 사용하는 `ConversionService` 에 컨버터를 추가해준다.<br>
 
